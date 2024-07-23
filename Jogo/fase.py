@@ -1,5 +1,6 @@
 import pygame
 from config import GAME, QUIT , INICIO, WIDTH,HEIGHT, GAMEOVER, FPS
+from gerador import gera_numeros
 
 def tela_fase(tela):
     clock= pygame.time.Clock()
@@ -8,6 +9,11 @@ def tela_fase(tela):
     while rodando:
         clock.tick(FPS)
 
+        #Configura o Chão
+        chãoHeight = 30 #Altura
+        # Cria retangulo  pygame.Rect( Esquerda, Topo , Largura, Altura)
+        chãoRect = pygame.Rect( 0,  HEIGHT-chãoHeight,  WIDTH ,  chãoHeight) 
+        chãoCollor = (233,150,233)
 
         #Analisa eventos
         for event in pygame.event.get():
@@ -19,6 +25,7 @@ def tela_fase(tela):
 
         #Preenche a tela
         tela.fill((255,255,255))
+        pygame.draw.rect(tela,chãoCollor, chãoRect)
         
         #Atualiza tela
         pygame.display.flip()
