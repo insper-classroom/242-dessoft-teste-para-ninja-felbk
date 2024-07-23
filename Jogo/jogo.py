@@ -5,6 +5,7 @@ from config import WIDTH, HEIGHT, FPS, INICIO, GAME, GAMEOVER, QUIT
 from inicio import tela_incio
 from fase import tela_fase
 
+
 #Inicialização do pygame
 pygame.init()
 
