@@ -13,6 +13,7 @@ pygame.init()
 tela = pygame.display.set_mode((WIDTH,HEIGHT))
 state= INICIO
 
+#Loop Principal do jogo inteiro
 while state != QUIT:
     if state == INICIO:
         #Rodar a tela inicial------
