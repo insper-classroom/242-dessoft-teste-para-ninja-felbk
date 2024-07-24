@@ -18,7 +18,11 @@ def tela_fase(tela):
 
         #Cria grupo de blocos
         blocos = pygame.sprite.Group()
-
+            
+        #Configura blocos
+        BlocoWidth = 200
+        BlocoHeight = 200
+        CoresBlocos = [(255,0,0),(0,255,0),(0,0,255)]
         
 
         #Analisa eventos
@@ -26,6 +30,10 @@ def tela_fase(tela):
             if event.type == pygame.QUIT:
                 state = QUIT
                 rodando = False
+
+        if len(blocos.sprites()) <= 1:
+            blocos.empty
+
 
         
 
