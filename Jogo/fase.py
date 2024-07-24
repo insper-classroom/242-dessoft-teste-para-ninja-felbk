@@ -31,8 +31,7 @@ def tela_fase(tela):
                 state = QUIT
                 rodando = False
 
-        if len(blocos.sprites()) <= 1:
-            blocos.empty
+       
 
 
         
