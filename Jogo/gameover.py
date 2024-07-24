@@ -1,7 +1,7 @@
 import pygame
 from config import GAME, FPS, QUIT, WIDTH, HEIGHT,GAME
 
-def tela_gameover(tela):
+def tela_gameover(tela,Pontos):
     clock = pygame.time.Clock()
     rodando = True
 
@@ -15,6 +15,8 @@ def tela_gameover(tela):
     buttonheight = playheight + 50
     
     rectbutton = pygame.Rect((WIDTH/2 - buttonwidth/2 , HEIGHT/2 - buttonheight/2, buttonwidth, buttonheight))
+
+    TextoPontos = fonte.render(f'Pontos: {str(Pontos)}',True,(0,0,0))
 
     
     while rodando:
@@ -37,6 +39,7 @@ def tela_gameover(tela):
         tela.fill((255,255,255))
         pygame.draw.rect(tela,(255,0,0),rectbutton)
         tela.blit(textoPlay,(WIDTH/2 - playwidth/2, HEIGHT/2 - playheight/2))
+        tela.blit(TextoPontos,(5,5))
         
         #Atualiza tela
         pygame.display.flip()

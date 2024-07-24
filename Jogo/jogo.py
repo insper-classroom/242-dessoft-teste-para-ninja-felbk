@@ -18,10 +18,12 @@ while state != QUIT:
         #Rodar a tela inicial------
         state = tela_incio(tela)
     elif state == GAME:
-        state = tela_fase(tela)
+        state_Pontos = tela_fase(tela)
+        state = state_Pontos[0]
+        Pontos = state_Pontos[1]
     else:
-        state = tela_gameover(tela)
+        state = tela_gameover(tela,Pontos)
     
-print("saindo")
+
 pygame.quit()
     
