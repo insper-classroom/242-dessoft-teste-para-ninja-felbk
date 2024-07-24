@@ -49,7 +49,7 @@ def tela_fase(tela):
             tela.blit(valor,(self.pos[0]+ self.size[0]/2 - valorWidth/2 , self.pos[1] + self.size[1]/2 - valorHeight/2))
             return
 
-    pygame.time.wait(500)
+    pygame.time.wait(200)
     while rodando:
         clock.tick(FPS)
         
