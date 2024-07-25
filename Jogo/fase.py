@@ -52,22 +52,16 @@ def tela_fase(tela):
     pygame.time.wait(200)
     while rodando:
         clock.tick(FPS)
-        
-
         #Texto das vidas
         txtvidas = font.render(f"Vidas: {str(int(vidas))}",True,(0,0,0))
         txtvidasHeight = txtvidas.get_height() #Altura do texto
-
         #subtrai tempo
         Timer -= 1/FPS
-
         #Subtrai timer msg    
         msgTimer -= 1/FPS
-
         #Texto do tempo 
         Tempo = font.render(f"Tempo restante: {str(int(Timer))}s",True,(0,0,0))
         TempoWidth = Tempo.get_width()
-        
         #Configura o Chão
         chãoHeight = 40 #Altura
         # Cria retangulo  pygame.Rect( Esquerda, Topo , Largura, Altura)
@@ -123,6 +117,7 @@ def tela_fase(tela):
                         msgHeight = msg.get_height() #coleta altura
                         mostramsg = True
                         msgPos = ( bloco.pos[0]+ bloco.size[0]/2 - msgWidth/2 , bloco.pos[1] + bloco.size[1]/2 - msgHeight/2 )
+                        print(bloco.valor) #Printa valor do bloco clicado
                         
 
                         #Adicona ponto se o bloco eliminado não fizer parte da soma 
