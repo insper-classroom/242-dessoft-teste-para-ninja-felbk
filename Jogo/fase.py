@@ -83,7 +83,7 @@ def tela_fase(tela):
                     errado = True
                 else:
                     errado= False
-                bloco = Bloco(num[i],CoresBlocos[i], (WIDTH/2 - 60 ,HEIGHT - chãoHeight - (120*(i+1))), errado )
+                Bloco(num[i],CoresBlocos[i], (WIDTH/2 - 60 ,HEIGHT - chãoHeight - (120*(i+1))), errado )
 
         #Gera a imagem do valor da soma
         sm = font.render(str(num[3]),True,(0,0,0))
