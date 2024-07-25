@@ -89,7 +89,7 @@ def tela_fase(tela):
         sm = font.render(str(num[3]),True,(0,0,0))
 
         #Analisa eventos
-        for event in pygame.event.get():
+        for event in pygame.event.get(): #Fecha o jogo ao clicar no X da janela
             if event.type == pygame.QUIT:
                 state = QUIT
                 rodando = False
